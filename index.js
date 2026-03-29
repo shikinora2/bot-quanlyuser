@@ -194,14 +194,14 @@ client.on(Events.InteractionCreate, async interaction => {
                 .setColor('#3498db') 
                 .setTitle('🌟 CHÀO MỪNG BẠN ĐẾN VỚI SERVER 🌟')
                 .setDescription(
-                    'Để có thể nhìn thấy các kênh chat và giao lưu cùng mọi người, bạn vui lòng hoàn tất thủ tục **Đăng Ký Thành Viên** nhé!\n\n' +
+                    'Bạn vui lòng hoàn tất thủ tục **Đăng Ký Thành Viên** nhé!\n\n' +
                     '**📜 Hướng dẫn các bước:**\n' +
                     '> **Bước 1:** Bấm vào nút bên dưới để khai báo Tên nhân vật và Năm sinh.\n' +
                     '> **Bước 2:** Lựa chọn Giới tính và Hệ phái của bạn.\n' +
-                    '> **Bước 3:** Bấm Hoàn tất để hệ thống tự động mở khóa server.\n\n' +
+                    '> **Bước 3:** Bấm Hoàn tất để hệ thống tự động cấp Role\n\n' +
                     '*⚠️ Lưu ý: Tên hiển thị của bạn trên Discord sẽ tự động được đổi thành tên nhân vật trong game.*'
                 )
-                .setFooter({ text: 'Hệ thống quản lý tự động' });
+                .setFooter({ text: 'Hệ thống quản lý user tự động' });
 
             await channel.send({ embeds: [welcomeEmbed], components: [new ActionRowBuilder().addComponents(registerButton)] });
             return interaction.reply({ content: `✅ Đã gửi bảng đăng ký vào kênh <#${kenhDangKyId}>!`, ephemeral: true });
